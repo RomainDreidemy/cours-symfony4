@@ -26,6 +26,7 @@ class UserFixture extends BaseFixture
 
             $user = new User();
             $user->setEmail('admin' . $num . '@kritik.fr')
+                ->setPseudo('admin' . $num)
                 ->setRoles(['ROLE_ADMIN'])
                 ->setPassword($this->userPasswordEncoder->encodePassword($user,'admin' . $num))
             ;
@@ -38,7 +39,8 @@ class UserFixture extends BaseFixture
 
             $user = new User();
             $user->setEmail('user' . $num . '@kritik.fr')
-                ->setPassword($this->userPasswordEncoder->encodePassword($user,'admin' . $num))
+                ->setPseudo('pseudo'. $num)
+                ->setPassword($this->userPasswordEncoder->encodePassword($user,'pseudo' . $num))
             ;
 
             // Toujours retourner l'entité
