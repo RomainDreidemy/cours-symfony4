@@ -1,0 +1,29 @@
+{% extends "_template.html.twig" %}
+
+{% block content %}
+    <div class="section">
+        <h1 class="title">Artistes</h1>
+
+        {% for a in res %}
+            <div class="box">
+                <article class="media">
+                    <div class="media-left">
+                        <figure class="image is-128x128">
+                            <img src="https://loremflickr.com/256/256/album,music/all?lock={{ a.id }}" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <a href="#" class="has-text-primary">
+                                    <strong><a href="{{ url('artist_byId', {'id': a.id }) }}">{{ a.name }}</a>
+                                    </strong>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
