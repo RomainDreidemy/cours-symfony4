@@ -31,7 +31,8 @@
 
 ### Créer une entité (Entity)
 >.\bin\console make:entity
->*Peut être réutiliser pour modifier une entité*
+>
+>>*Peut être réutiliser pour modifier une entité*
 
 ### Créer un formulaire
 >.\bin\console make:form
