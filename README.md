@@ -1,6 +1,6 @@
 # Commandes symfony
 
-### Initialisation d'un projet
+## Initialisation d'un projet
 >composer create-project symfony/skeleton sf4
 
 ### Server local symfony
@@ -24,7 +24,19 @@
 ### Installation de l'ORM (DOCTRINE)
 >composer require orm
 
-# Doctrine
+## Commande Maker
+
+### Créer un controller
+>.\bin\console make:controller
+
+### Créer une entité (Entity)
+>.\bin\console make:entity
+>*Peut être réutiliser pour modifier une entité*
+
+### Créer un formulaire
+>.\bin\console make:form
+
+## Doctrine
 
 ### Création de la base de données
 >.\bin\console doctrine:database:create
@@ -34,3 +46,5 @@
 
 ### Migration des données (Entré en base de données)
 >.\bin\console doctrine:migrations:migrate
+
+
